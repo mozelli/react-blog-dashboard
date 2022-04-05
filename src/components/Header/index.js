@@ -5,7 +5,7 @@ const Header = () => {
         <div className={ styles.container }>
             <div className={ styles.leftHeaderBlock }>
                 <a href='/' className={ styles.menuButton }>
-                    <i class="ri-menu-line ri-xl"></i>
+                    <i className="ri-menu-line ri-xl"></i>
                 </a>
                 <a href="/">
                     <h1 className={ styles.title }>
@@ -15,7 +15,7 @@ const Header = () => {
             </div>
             <div className={ styles.rightHeaderBlock }>
                 <a href="/" className={ styles.searchButton }>
-                    <i class="ri-search-line ri-xl"></i>
+                    <i className="ri-search-line ri-xl"></i>
                 </a>
             </div>
         </div>
