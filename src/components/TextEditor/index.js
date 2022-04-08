@@ -45,22 +45,43 @@ const TextEditor = () => {
     // }
 
     return (
-        <div className={ styles.editor }>
-            <div className="formGroup">
-                <input 
-                    type="text" 
-                    className={ styles.inputTitle } 
-                    placeholder="Título"
-                    value={ postTitle }
-                    onChange={ (event) => setPostTitle(event.target.value) } />
+        <div className={ styles.textEditor }>
+            <div className={ styles.editor }>
+                <div className="formGroup">
+                    <input 
+                        type="text" 
+                        className={ styles.inputTitle } 
+                        placeholder="Título"
+                        value={ postTitle }
+                        onChange={ (event) => setPostTitle(event.target.value) } />
+                </div>
+                
+                <div id="container" ref={wrapperRef}></div>
+                <div className="buttonGroup">
+                    <button type='button' className={ styles.saveButton }><i class="ri-save-3-line ri-xl"></i> Salvar rascunho</button>
+                    <button type='button' className={ styles.publishButton }><i class="ri-check-double-line ri-xl"></i> Publicar</button>
+                </div>
             </div>
-            
-            <div id="container" ref={wrapperRef}></div>
-            <div className="buttonGroup">
-                <button type='button' className={ styles.saveButton }><i class="ri-save-3-line ri-xl"></i> Salvar rascunho</button>
-                <button type='button' className={ styles.publishButton }><i class="ri-check-double-line ri-xl"></i> Publicar</button>
+
+            <div className={ styles.configPost }>
+                <div className={ styles.card }>
+                    <h1>
+                        Post
+                    </h1>
+                    <div className={ styles.checkbox }>
+                        <input type="checkbox" id="fixedOnTop" />
+                        <label htmlFor="fixedOnTop">Fixar no topo do blog</label>
+                    </div>
+                    <div className="formGroup">
+                        <label htmlFor="author">Autor</label>
+                        <select name="author" id="autor">
+                            <option value="João Mozelli Neto">João Mozelli</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
+        
     );
 }
 

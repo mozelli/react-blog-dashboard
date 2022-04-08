@@ -125,11 +125,15 @@ button {
 .formGroup {
     margin: 10px 0;
 
-    input, select, textarea {
+    input[type='text'], select, textarea {
         width: 100%;
         border: 1px solid var(--clr-gray-300);
         border-radius: 0.5rem;
     }
+}
+
+input[type='checkbox'] {
+    margin-right: 1rem;
 }
 
 .buttonGroup {
