@@ -1,0 +1,51 @@
+.editor {
+    width: 100%;
+    background-color: #FAFAFA;
+    //height: 85vh;
+    height: 1000px;
+    padding: 2rem;
+
+    color: var(--clr-gray-900);
+
+    .inputTitle {
+        font-size: 2.5rem;
+        padding: 1.2rem 0.6rem;
+    }
+
+    .saveButton {
+        background-color: var(--clr-gray-600);
+        color: var(--clr-white);
+        transition: all 300ms;
+        
+        i {
+            padding-right: 0.8rem;
+        }
+
+        &:hover {
+            background-color: var(--clr-gray-900);
+        }
+    }
+
+    .publishButton {
+        background-color: var(--clr-blue-300);
+        color: var(--clr-white);
+        transition: all 300ms;
+        
+        i {
+            padding-right: 0.8rem;
+        }
+
+        &:hover {
+            background-color: var(--clr-blue-500);
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .editor {
+        .inputTitle {
+            font-size: 2rem;
+            padding: 1rem 0.6rem;
+        }
+    }
+}

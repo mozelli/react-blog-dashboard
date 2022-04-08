@@ -30,6 +30,22 @@
     --ff-sans-serif: "Roboto", sans-serif;
 }
 
+/* QUILL JS - RICH TEXT EDITOR */
+
+.ql-editor {
+    min-height: 70vh;
+}
+
+.ql-toolbar, .ql-container {
+    background: var(--clr-white);
+}
+
+.ql-toolbar.ql-snow {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 .bg-white { background-color: var(--clr-white); }
 
 .bg-light { background-color: var(--clr-light); }
@@ -106,6 +122,32 @@ button {
     //max-width: 80rem;
 }
 
+.formGroup {
+    margin: 10px 0;
+
+    input, select, textarea {
+        width: 100%;
+        border: 1px solid var(--clr-gray-300);
+        border-radius: 0.5rem;
+    }
+}
+
+.buttonGroup {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+
+    button {
+        padding: 1rem 1rem;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -117,11 +159,6 @@ button {
     white-space: nowrap;
     border: 0;
 }
-
-.fs-900 { font-size: var(--fs-900); }
-.fs-800 { font-size: var(--fs-800); }
-.fs-700 { font-size: var(--fs-700); }
-.fs-600 { font-size: var(--fs-600); }
 
 .uppercase { text-transform: uppercase; }
 
