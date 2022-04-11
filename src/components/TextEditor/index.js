@@ -20,6 +20,8 @@ const TOOLBAR_OPTIONS = [
 const TextEditor = () => {
 
     const [postTitle, setPostTitle] = useState("");
+    const [category, setCategory] = useState("Sem categoria");
+    const [tags, setTags] = useState([]);
 
     //const [quill, setQuill] = useState();
 
@@ -77,6 +79,34 @@ const TextEditor = () => {
                         <select name="author" id="autor">
                             <option value="João Mozelli Neto">João Mozelli</option>
                         </select>
+                    </div>
+
+                    <div className="formGroup">
+                        <label htmlFor="category">Categoria</label>
+                        <select 
+                            name="category" 
+                            id="category" 
+                            onChange={(event) => setCategory(event.target.value)}
+                            >
+                            <option value="Sem categoria">{ category }</option>
+                        </select>
+                    </div>
+                    <div className="formGroup">
+                        <label htmlFor="tag">Tags</label>
+                        <input 
+                            type="text" 
+                            id='tag' 
+                            value={ tags } 
+                            onChange={ (event) => setTags(event.target.value) } 
+                            />
+                    </div>
+                    <div className="formGroup">
+                        <label htmlFor="featuredImage">Imagem destacada</label>
+                        <input type="file" id='featuredImage' name="featuredImage" />
+                    </div>
+                    <div className="formGroup">
+                        <label htmlFor="resume">Resumo</label>
+                        <textarea name="resume" id="resume"></textarea>
                     </div>
                 </div>
             </div>

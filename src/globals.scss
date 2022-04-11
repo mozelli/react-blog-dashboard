@@ -130,10 +130,25 @@ button {
         border: 1px solid var(--clr-gray-300);
         border-radius: 0.5rem;
     }
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.formGroup {
+    input[type="text"], textarea {
+        padding: 1rem 0.6rem;
+    }
 }
 
 input[type='checkbox'] {
     margin-right: 1rem;
+}
+
+select {
+    padding: 0.4rem 1rem;
 }
 
 .buttonGroup {
