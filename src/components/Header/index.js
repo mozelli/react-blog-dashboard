@@ -2,23 +2,28 @@ import styles from './header.module.scss';
 
 const Header = () => {
     return (
-        <div className={ styles.container }>
+        <div className={ styles.headerContainer }>
             <div className={ styles.leftHeaderBlock }>
-                <a href='/' className={ styles.menuButton }>
-                    <i className="ri-menu-line ri-xl"></i>
-                </a>
                 <a href="/">
-                    <h1 className={ styles.title }>
+                    <h1 className={ styles.brand }>
                         Dashboard
                     </h1>
                 </a>
+                <i class="ri-shield-user-line ri-xl"></i>
+                <span>Olá João!</span>
             </div>
             <div className={ styles.rightHeaderBlock }>
-                <a href="/" className={ styles.searchButton }>
-                    <i className="ri-search-line ri-xl"></i>
-                </a>
+                <nav>
+                    <ul>
+                        <li><i class="ri-dashboard-fill"></i> Painel</li>
+                        <li><i class="ri-settings-4-fill"></i> Configurações</li>
+                        <li><i class="ri-profile-line"></i> Profile</li>
+                        <li><i class="ri-shut-down-line"></i> Sair</li>
+                    </ul>
+                </nav>
             </div>
         </div>
+        
     );
 }
 

@@ -1,10 +1,12 @@
 import Router from './routes';
 import './globals.scss';
-import './App.css';
+import styles from './app.module.scss';
 
 function App() {
   return (
-    <Router />
+    <div className={ styles.app }>
+      <Router />
+    </div>
   );
 }
 
