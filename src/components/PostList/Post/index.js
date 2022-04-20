@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './post.module.scss';
 
 const Post = (props) => {
@@ -7,9 +8,9 @@ const Post = (props) => {
         <div className={ styles.post }>
             <div className={ styles.leftBlockPost }>
                 <div className={ styles.title }>
-                    <a href={ link }>
+                    <Link to={ link }>
                         { title }
-                    </a> 
+                    </Link> 
                 </div>
                 <div className={ styles.date }>
                     <i className="ri-calendar-2-line"></i> 
@@ -19,9 +20,18 @@ const Post = (props) => {
                 </div>
             </div>
             <div className={ styles.rightBlockPost }>
-                <a href="/">
+                <div className={ styles.options }>
+                    <ul>
+                        <Link to="/">
+                            <li><i class="ri-eye-line ri-xl"></i> Visualizar</li>
+                        </Link>
+                        <li><i class="ri-pencil-line ri-xl"></i> Editar</li>
+                        <li><i class="ri-delete-bin-line ri-xl"></i> Colocar na lixeira</li>
+                    </ul>
+                </div>
+                <Link to="/">
                     <i className="ri-arrow-down-s-line ri-xl"></i>
-                </a>
+                </Link>
             </div>
         </div>
     );
