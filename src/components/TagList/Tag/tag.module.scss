@@ -1,0 +1,20 @@
+.tag {
+    background-color: var(--clr-white);
+    padding: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--clr-dark);
+
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+    }
+}

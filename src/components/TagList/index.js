@@ -1,3 +1,4 @@
+import Tag from './Tag';
 import styles from './tagList.module.scss';
 
 const TagList = () => {
@@ -13,6 +14,7 @@ const TagList = () => {
                     <button type='button'>Criar nova tag</button>
                 </div>
             </div>
+            <Tag name="Nome" />
 
         </div>
     );
