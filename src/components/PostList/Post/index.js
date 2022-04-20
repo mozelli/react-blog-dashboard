@@ -12,7 +12,7 @@ const Post = (props) => {
                     </a> 
                 </div>
                 <div className={ styles.date }>
-                    <i class="ri-calendar-2-line"></i> 
+                    <i className="ri-calendar-2-line"></i> 
                     <span>
                         { date }
                     </span> 

@@ -12,14 +12,22 @@
         padding: 0 0 1rem 0;
         margin: 0;
 
+        a {
+            color: var(--clr-white);
+            text-decoration: none;
+        }
+
         li {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            background-color: var(--clr-gray-600);    
+            gap: 1rem;   
             margin: 0.5rem 2rem 0.5rem 2rem;
             padding: 1rem;
             border-radius: 0.3rem;
+        }
+
+        li:hover {
+            background-color: var(--clr-gray-600);
         }
     }
 }

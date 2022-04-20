@@ -1,7 +1,6 @@
 import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
-// import Posts from '../../components/Posts';
 import styles from './home.module.scss';
 
 const Home = () => {

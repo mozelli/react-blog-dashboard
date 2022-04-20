@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './header.module.scss';
 
 const Header = () => {
@@ -9,16 +10,18 @@ const Header = () => {
                         Dashboard
                     </h1>
                 </a>
-                <i class="ri-shield-user-line ri-xl"></i>
+                <i className="ri-shield-user-line ri-xl"></i>
                 <span>Olá João!</span>
             </div>
             <div className={ styles.rightHeaderBlock }>
                 <nav>
                     <ul>
-                        <li><i class="ri-dashboard-fill"></i> Painel</li>
-                        <li><i class="ri-settings-4-fill"></i> Configurações</li>
-                        <li><i class="ri-profile-line"></i> Profile</li>
-                        <li><i class="ri-shut-down-line"></i> Sair</li>
+                        <Link to="/">
+                            <li><i className="ri-dashboard-fill"></i> Painel</li>
+                        </Link>
+                        <li><i className="ri-settings-4-fill"></i> Configurações</li>
+                        <li><i className="ri-profile-line"></i> Profile</li>
+                        <li><i className="ri-shut-down-line"></i> Sair</li>
                     </ul>
                 </nav>
             </div>

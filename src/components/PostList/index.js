@@ -1,7 +1,7 @@
 import Post from './Post';
-import styles from './posts.module.scss';
+import styles from './postList.module.scss';
 
-const Posts = () => {
+const PostList = () => {
     return (
         <div className={ styles.container }>
             <div className={ styles.posts }>
@@ -11,4 +11,4 @@ const Posts = () => {
     );
 }
 
-export default Posts;
+export default PostList;
