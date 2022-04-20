@@ -15,8 +15,13 @@ const Menu = () => {
                 <Link to='/categories'>
                     <li><i className="ri-bookmark-line"></i> Categorias</li>
                 </Link>
-                <li><i className="ri-user-line"></i> Usuários</li>
-                <li><i className="ri-eye-line"></i> Visualizar o blog</li>
+                <Link to='/users'>
+                    <li><i className="ri-user-line"></i> Usuários</li>
+                </Link>
+                <Link to="/">
+                    <li><i className="ri-eye-line"></i> Visualizar o blog</li>
+                </Link>
+
 
             </ul>
         </nav>
