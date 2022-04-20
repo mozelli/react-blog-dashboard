@@ -12,7 +12,9 @@ const Menu = () => {
                 <Link to='/tags'>
                     <li><i className="ri-price-tag-3-line"></i> Tags</li>
                 </Link>
-                <li><i className="ri-bookmark-line"></i> Categorias</li>
+                <Link to='/categories'>
+                    <li><i className="ri-bookmark-line"></i> Categorias</li>
+                </Link>
                 <li><i className="ri-window-line"></i> Páginas</li>
                 <li><i className="ri-brush-line"></i> Aparência</li>
                 <li><i className="ri-user-line"></i> Usuários</li>

@@ -7,7 +7,7 @@ const Tag = (props) => {
                 <i className="ri-price-tag-3-line ri-xl"></i><span>{ props.name }</span>
             </div>
             <div className={ styles.right }>
-                <i class="ri-arrow-down-s-line ri-xl"></i>
+                <i className="ri-arrow-down-s-line ri-xl"></i>
             </div>
         </div>
     );
