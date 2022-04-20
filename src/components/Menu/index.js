@@ -9,7 +9,9 @@ const Menu = () => {
                 <Link to="/posts">
                     <li><i className="ri-file-line"></i> Posts</li>
                 </Link>
-                <li><i className="ri-price-tag-3-line"></i> Tags</li>
+                <Link to='/tags'>
+                    <li><i className="ri-price-tag-3-line"></i> Tags</li>
+                </Link>
                 <li><i className="ri-bookmark-line"></i> Categorias</li>
                 <li><i className="ri-window-line"></i> Páginas</li>
                 <li><i className="ri-brush-line"></i> Aparência</li>

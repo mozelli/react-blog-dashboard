@@ -60,11 +60,17 @@
             }
 
             button {
-                background-color: var(--clr-orange-500);
+                background-color: var(--clr-orange-300);
                 border: 0;
                 color: var(--clr-white);
                 padding: 0.5rem 1rem;
                 margin: 0 1rem;
+                cursor: pointer;
+                transition: background-color 300ms;
+            }
+
+            button:hover {
+                background-color: var(--clr-orange-500);
             }
         }
     }

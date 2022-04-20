@@ -24,10 +24,10 @@ const Post = (props) => {
                 <div className={ styles.options }>
                     <ul>
                         <Link to="/">
-                            <li><i class="ri-eye-line ri-xl"></i> Visualizar</li>
+                            <li><i className="ri-eye-line ri-xl"></i> Visualizar</li>
                         </Link>
-                        <li><i class="ri-pencil-line ri-xl"></i> Editar</li>
-                        <li><i class="ri-delete-bin-line ri-xl"></i> Colocar na lixeira</li>
+                        <li><i className="ri-pencil-line ri-xl"></i> Editar</li>
+                        <li><i className="ri-delete-bin-line ri-xl"></i> Colocar na lixeira</li>
                     </ul>
                 </div>
                 <Link to="/">
