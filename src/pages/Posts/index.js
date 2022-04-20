@@ -2,6 +2,7 @@ import Header from './../../components/Header';
 import Menu from './../../components/Menu';
 import PostList from '../../components/PostList';
 import Footer from './../../components/Footer';
+import Badge from '../../components/Badge';
 import styles from './posts.module.scss';
 
 const Posts = () => {
@@ -20,9 +21,9 @@ const Posts = () => {
 
                 <div className={ styles.filter }>
                     <ul>
-                        <li>Publicados</li>
-                        <li>Rascunhos</li>
-                        <li>Lixeira</li>
+                        <li>Publicados <Badge value="3" /></li>
+                        <li>Rascunhos <Badge value="0" /></li>
+                        <li>Lixeira <Badge value="1" /></li>
                     </ul>
                     <button type='button'>Criar novo post</button>
                 </div>
