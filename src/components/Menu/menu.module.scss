@@ -24,10 +24,11 @@
             margin: 0.5rem 2rem 0.5rem 2rem;
             padding: 1rem;
             border-radius: 0.3rem;
+            transition: background-color 200ms
         }
 
         li:hover {
-            background-color: var(--clr-gray-600);
+            background-color: var(--clr-orange-300);
         }
     }
 }
