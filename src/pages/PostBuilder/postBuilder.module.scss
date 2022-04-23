@@ -33,6 +33,30 @@
         grid-area: sideBar;
         padding: 1rem 1rem 0 0;
 
+        .customCheckbox {
+            
+            #fixedOnTop {
+                display: none;
+            }
+
+            #fixedOnTop + label::before {
+                content: '';
+                width: 1.8rem;
+                height: 1.8rem;
+                border-radius: 0.5rem;
+                display: inline-block;
+                border: 1px solid var(--clr-gray-600);
+                vertical-align: middle;
+                margin-right: 1rem;
+                margin-bottom: 0.2rem;
+            }
+        }
+
+        .customCheckbox input:checked + label::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='23555555' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M0 11.386l1.17-1.206c1.951.522 5.313 1.731 8.33 3.597 3.175-4.177 9.582-9.398 13.456-11.777l1.044 1.073-14 18.927-10-10.614z'/%3E%3C/svg%3E");
+            background-color: var(--clr-blue-500);
+        }
+
         .pill {
             display: flex;
             align-items: center;

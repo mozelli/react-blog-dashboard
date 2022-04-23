@@ -10,9 +10,15 @@ const PostBuilder = () => {
     const [value, onChange] = useState('Comece aqui!');
     const [tag, setTag] = useState('');
     const [tags, setTags] = useState([]);
-    const [category, setCategory] = useState('');
-    const [author, setAuthor] = useState('');
+    const [category, setCategory] = useState('Sem categoria');
+    const [author, setAuthor] = useState('Anônimo');
     const [fixedOnTop, setFixedOnTop] = useState(false);
+    const [post, setPost] = useState({});
+
+    function changeFixedOnTopState() {
+        let state = !fixedOnTop;
+        setFixedOnTop(state);
+    }
 
     function tagHandler() {
         setTags([...tags,tag]);
@@ -26,8 +32,19 @@ const PostBuilder = () => {
         });
 
         setTags(newTagsArray);
+    }
 
-        console.log(tags);
+    function postHandler() {
+        setPost({
+            title: postTitle,
+            tags,
+            category,
+            author,
+            body: value,
+            fixedOnTop,
+        });
+
+        console.log(post);
     }
 
     return (
@@ -46,20 +63,29 @@ const PostBuilder = () => {
                     />
                 </div>
                 <RichTextEditor value={value} onChange={onChange} />
-                <button type="button">Publicar</button>
+                <button type="button" onClick={() => postHandler() }>Publicar</button>
                 
             </main>
 
             <aside className={ styles.sideBar }>
                 <div className="card">
-                    <p>Fixar post no topo</p>
+                    <div className={ styles.customCheckbox }>
+                        <input 
+                            type="checkbox" 
+                            id={ styles.fixedOnTop } 
+                            
+                            onChange={changeFixedOnTopState} 
+                        />
+                        <label htmlFor={ styles.fixedOnTop }>Fixar no topo</label>
+                    </div>
                 </div>
 
                 <div className="card">
                     <h1>Autor</h1>
                     <div className="formGroup">
-                        <select name="author" id="author">
-                            <option value="none">João Mozelli Neto</option>
+                        <select name="author" id="author" onChange={(event) => setAuthor(event.target.value)}>
+                            <option value={ author }>Escolha</option>
+                            <option value="João Mozelli Neto">João Mozelli Neto</option>
                         </select>
                     </div>
                 </div>
@@ -93,8 +119,8 @@ const PostBuilder = () => {
                     <h1>Categoria</h1>
                     <small>Escolha uma categoria ou crie uma nova.</small>
                     <div className="formGroup">
-                        <select name="category" id="category">
-                            <option value="choose">Escola uma cateogoria</option>
+                        <select name="category" id="category" onChange={(event) => setCategory(event.target.value)}>
+                            <option value={ category }>Escola uma cateogoria</option>
                             <option value="none">Sem categoria</option>
                         </select>
                     </div>

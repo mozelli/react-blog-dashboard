@@ -1,0 +1,44 @@
+.medias {
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "menu display display display"
+        "footer footer footer footer";
+
+    grid-template-columns: 20vw auto auto auto;
+    grid-template-rows: auto auto auto;
+    
+    gap: 1rem;
+
+    .header {
+        grid-area: header;
+    }
+
+    .menu {
+        background-color: var(--clr-light);
+        grid-area: menu;
+    }
+    
+    .display {
+        grid-area: display;
+        background-color: var(--clr-light);
+        padding: 1rem 2rem;
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--clr-dark);
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 1.3rem;
+            color: var(--clr-gray-600);
+        }
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: var(--clr-light);
+    }
+}
