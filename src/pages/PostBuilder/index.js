@@ -19,6 +19,17 @@ const PostBuilder = () => {
         setTag('');
     }
 
+    function closeTag(tag) {
+        let oldTagsArray = tags;
+        let newTagsArray = oldTagsArray.filter((i) => {
+            return i !== tag;
+        });
+
+        setTags(newTagsArray);
+
+        console.log(tags);
+    }
+
     return (
         <div className={ styles.postBuilder }>
             <div className={ styles.topBar }>
@@ -64,13 +75,18 @@ const PostBuilder = () => {
                             </button>
                         </div>
                     </div>
+                    <span className={ styles.pill }>
                     {
                         tags.map((tag, index) => {
                             return (
-                                <span key={index}>"{ tag }" </span>
-                            )
+                                
+                                <button key={ index } onClick={() => closeTag(tag)}>
+                                    {tag} <i className="ri-close-circle-line"></i>
+                                </button>
+                            );
                         })
                     }
+                    </span>
                 </div>
 
                 <div className="card">
