@@ -5,7 +5,7 @@
         "topBar topBar topBar"
         "editor sideBar sideBar"
     ;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 70% auto auto;
     grid-template-rows: auto auto auto;
     gap: 1rem;
 
@@ -15,22 +15,23 @@
         grid-area: topBar;
         background-color: var(--clr-white);
         height: 5rem;
-        position: sticky;
     }
 
     .editor {
         grid-area: editor;
-        padding: 0 1rem;
+        padding-left: 1rem;
 
         .postTitle {
             font-size: 3rem;
             font-weight: 700;
             color: var(--clr-gray-600);
+            border: 1px solid var(--clr-gray-300);
         }
     }
 
     .sideBar {
         grid-area: sideBar;
+        padding: 1rem 1rem 0 0;
     }
 
     #editor {

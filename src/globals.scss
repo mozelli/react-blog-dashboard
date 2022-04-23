@@ -15,6 +15,7 @@
 
     --clr-white:         #FFFFFF;
     --clr-light:         #F2F2F2;
+    --clr-gray:          #C3C3C3;
     --clr-gray-300:      #A6A6A6;
     --clr-gray-600:      #737373;
     --clr-gray-900:      #404040;
@@ -30,21 +31,6 @@
     --ff-sans-serif: "Roboto", sans-serif;
 }
 
-/* QUILL JS - RICH TEXT EDITOR */
-
-.ql-editor {
-    min-height: 70vh;
-}
-
-.ql-toolbar, .ql-container {
-    background: var(--clr-white);
-}
-
-.ql-toolbar.ql-snow {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
 
 .bg-white { background-color: var(--clr-white); }
 
@@ -107,7 +93,14 @@ button {
 
 .flex {
     display: flex;
-    gap: var(--gap, 1rem);
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.justifyCenter {
+    justify-content: center;
 }
 
 .grid {
@@ -143,12 +136,40 @@ button {
     }
 }
 
+.formGroup {
+    .inputGroup {
+        display: flex;
+        align-items: center;
+
+        input[type="text"] {
+            padding: 1rem 0.6rem;
+            height: 40px;
+            border-radius: 0.5rem 0 0 0.5rem;
+        }
+        button {
+            color: var(--clr-white);
+            height: 4rem;
+            padding: 1rem 2rem;
+            border: 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            cursor: pointer;
+            background-color: var(--clr-blue-300);
+            transition: background-color 300ms;
+
+            &:hover {
+                background-color: var(--clr-blue-500);
+            }
+        }
+    }
+}
+
 input[type='checkbox'] {
     margin-right: 1rem;
 }
 
 select {
-    padding: 0.4rem 1rem;
+    padding: 1rem 1rem;
+    color: var(--clr-gray-600);
 }
 
 .buttonGroup {
@@ -164,6 +185,42 @@ select {
         cursor: pointer;
         display: flex;
         align-items: center;
+    }
+}
+
+.card {
+    background-color: var(--clr-white);
+    border: 1px solid var(--clr-gray);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    small {
+        color: var(--clr-gray-600);
+        text-align: center;
+        display: block;
+    }
+
+    button {
+        border: 0;
+        cursor: pointer;
+    }
+
+    button.danger {
+        background-color: var(--clr-orange-300);
+        color: var(--clr-white);
+        font-weight: 700;
+        padding: 1rem;
+        transition: background-color 300ms;
+
+        &:hover {
+            background-color: var(--clr-orange-500);
+        }
     }
 }
 
