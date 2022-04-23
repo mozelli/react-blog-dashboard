@@ -4,6 +4,7 @@ import PostList from '../../components/PostList';
 import Footer from './../../components/Footer';
 import Badge from '../../components/Badge';
 import styles from './posts.module.scss';
+import { Link } from 'react-router-dom';
 
 const Posts = () => {
     return (
@@ -25,7 +26,9 @@ const Posts = () => {
                         <li>Rascunhos <Badge value="0" /></li>
                         <li>Lixeira <Badge value="1" /></li>
                     </ul>
-                    <button type='button'>Criar novo post</button>
+                    <Link to='/postBuilder'>
+                        <button type='button'>Criar novo post</button>
+                    </Link>
                 </div>
 
                 <PostList />

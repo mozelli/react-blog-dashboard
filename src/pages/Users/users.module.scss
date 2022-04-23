@@ -23,6 +23,43 @@
     .display {
         grid-area: display;
         background-color: var(--clr-light);
+        padding: 1rem 2rem;
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--clr-dark);
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 1.3rem;
+            color: var(--clr-gray-600);
+        }
+
+        .menu {
+            margin: 1rem 2rem;
+            background-color: var(--clr-white);
+            height: 5rem;
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                height: 5rem;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 2rem;
+                    color: var(--clr-blue-500);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        
     }
 
     .footer {
