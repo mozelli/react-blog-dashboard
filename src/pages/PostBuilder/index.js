@@ -1,9 +1,6 @@
 import { useState } from 'react';
-import { RichTextEditor } from '@mantine/rte';
-
+//import { RichTextEditor } from '@mantine/rte';
 import styles from './postBuilder.module.scss';
-
-
 
 const PostBuilder = () => {
     const [postTitle, setPostTitle] = useState('');
@@ -43,7 +40,6 @@ const PostBuilder = () => {
             body: value,
             fixedOnTop,
         });
-
         console.log(post);
     }
 
@@ -62,7 +58,7 @@ const PostBuilder = () => {
                         onChange={ (event) => setPostTitle(event.target.value) } 
                     />
                 </div>
-                <RichTextEditor value={value} onChange={onChange} />
+                {/* <RichTextEditor value={value} onChange={onChange} onImageUpload={handleImageUpload} /> */}
                 <button type="button" onClick={() => postHandler() }>Publicar</button>
                 
             </main>
