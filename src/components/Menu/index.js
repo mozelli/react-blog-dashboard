@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
+
 import styles from './menu.module.scss';
 
 const Menu = () => {
+
     return (
-        <nav className={ styles.nav }>
-            <h2>Menu</h2>
+        <nav className={ styles.sideBarMenu }>
             <ul>
-                <Link to="/posts">
+                <Link to="/posts" >
                     <li><i className="ri-file-line"></i> Posts</li>
                 </Link>
                 <Link to='/tags'>

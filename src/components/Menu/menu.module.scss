@@ -1,34 +1,39 @@
-.nav {
-    background-color: var(--clr-gray-900);
-    color: var(--clr-white);
 
-    h2 {
-        font-size: 2rem;
-        padding: 1rem 3rem;
-    }
+
+.sideBarMenu {
+
+    --green-400: #015958;
+    --green-300: #008F8C;
+    --green-200: #0CABAB;
+    --green-100: #0FC2C0;
+    --white: #FFFFFF;
+
+    background-color: var(--white);
+    color: var(--green-200);
 
     ul {
         list-style: none;
-        padding: 0 0 1rem 0;
+        padding: 0;
         margin: 0;
 
         a {
-            color: var(--clr-white);
+            color: var(--green-300);
             text-decoration: none;
-        }
 
-        li {
-            display: flex;
-            align-items: center;
-            gap: 1rem;   
-            margin: 0.5rem 2rem 0.5rem 2rem;
-            padding: 1rem;
-            border-radius: 0.3rem;
-            transition: background-color 200ms
-        }
-
-        li:hover {
-            background-color: var(--clr-orange-300);
+            li {
+                display: flex;
+                align-items: center;
+                height: 4.8rem;
+                gap: 2rem;   
+                padding: 0 2rem;
+                border: 1px solid var(--white);
+                transition: background-color 300ms, border 300ms;
+            }
+    
+            li:hover {
+                background-color: rgba(15, 194, 192, 0.3);
+                border: 1px solid var(--green-200);
+            }
         }
     }
 }
