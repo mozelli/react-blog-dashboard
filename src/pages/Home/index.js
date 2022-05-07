@@ -1,28 +1,12 @@
-import Header from '../../components/Header';
-import Menu from '../../components/Menu';
-import Footer from '../../components/Footer';
-import styles from './home.module.scss';
+//import { Outlet } from "react-router";
+import styles from "./home.module.scss";
 
 const Home = () => {
-    return (
-        <div className={ styles.home }>
-            
-            <div className={ styles.header }>
-                <Header />
-            </div>
-            <div className={ styles.menu }>
-                <Menu />
-            </div>
-            <div className={ styles.display }>
-                Display
-                {/* <Posts /> */}
-            </div>
-            <div className={ styles.footer }>
-                <Footer />
-            </div>
-            
-        </div>
-    );
-}
+  return (
+    <div className={styles.home}>
+      <h2>Home Dashboard</h2>
+    </div>
+  );
+};
 
 export default Home;

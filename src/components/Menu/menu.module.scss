@@ -1,39 +1,40 @@
-
-
 .sideBarMenu {
+  background-color: var(--white);
+  border: 1px solid var(--green-300);
+  border-radius: 0.5rem;
 
-    --green-400: #015958;
-    --green-300: #008F8C;
-    --green-200: #0CABAB;
-    --green-100: #0FC2C0;
-    --white: #FFFFFF;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    background-color: var(--white);
-    color: var(--green-200);
+    a {
+      color: var(--green-600);
+      text-decoration: none;
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+      li {
+        display: flex;
+        align-items: center;
+        height: 4.8rem;
+        gap: 2rem;
+        padding: 0 2rem;
+        border: 0;
+        transition: background-color 300ms, border 300ms;
 
-        a {
-            color: var(--green-300);
-            text-decoration: none;
-
-            li {
-                display: flex;
-                align-items: center;
-                height: 4.8rem;
-                gap: 2rem;   
-                padding: 0 2rem;
-                border: 1px solid var(--white);
-                transition: background-color 300ms, border 300ms;
-            }
-    
-            li:hover {
-                background-color: rgba(15, 194, 192, 0.3);
-                border: 1px solid var(--green-200);
-            }
+        &:hover {
+          background-color: var(--green-100);
         }
+
+        &:first-child {
+          border-top-left-radius: 0.5rem;
+          border-top-right-radius: 0.5rem;
+        }
+
+        &:last-child {
+          border-bottom-left-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
+        }
+      }
     }
+  }
 }

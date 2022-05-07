@@ -1,27 +1,20 @@
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 
-import Categories from './pages/Categories';
-import Home from './pages/Home';
-import Medias from './pages/Medias';
-import PostBuilder from './pages/PostBuilder';
-import Posts from './pages/Posts';
-import Tags from './pages/Tags';
-import Users from './pages/Users';
+import Dashboard from "./pages/Dashboard";
+import Home from "./pages/Home";
+import Posts from "./pages/Posts";
 
 const Router = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={ <Home /> } />
-                <Route path='/posts' element={ <Posts /> } />
-                <Route path='/tags' element={ <Tags /> } />
-                <Route path='/medias' element={ <Medias /> } />
-                <Route path='/categories' element={ <Categories /> } />
-                <Route path='/users' element={ <Users /> } />
-                <Route path='/postBuilder' element={ <PostBuilder /> } />
-            </Routes>
-        </BrowserRouter>
-    );
-}
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />}>
+          <Route index element={<Home />} />
+          <Route path="posts" element={<Posts />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default Router;
