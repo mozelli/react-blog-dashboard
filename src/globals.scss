@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+
 /* ------------------------ */
 /* Reset                    */
 /* ------------------------ */
@@ -12,7 +14,7 @@
 }
 
 :root {
-  font-size: 62.5%;
+  // font-size: 62.5%;
 
   /* Color */
 
@@ -22,6 +24,7 @@
   --grey-100: #f8f9fa;
   --grey-200: #e9ecef;
   --grey-300: #dee2e6;
+  --grey-300-25: rgba(222, 226, 230, 0.25);
   --grey-400: #ced4da;
   --grey-500: #adb5bd;
   --grey-600: #6c757d;
@@ -52,6 +55,7 @@
   --green-100: #d1e7dd;
   --green-200: #a3cfbb;
   --green-300: #75b798;
+  --green-300-25: rgba(117, 183, 152, 0.25);
   --green-400: #479f76;
   --green-500: #198754;
   --green-600: #146c43;
@@ -137,138 +141,24 @@ select,
 textarea,
 button {
   font: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // appearance: none;
 }
 
-select {
-  background-image: url("../public/arrow-drop-down-fill.svg");
-  background-size: 3rem 3rem;
-  background-position: right 0.5rem center;
-  background-repeat: no-repeat;
-  padding: 0.8rem;
-  padding-right: 2.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--green-300);
-}
+// select {
+//   background-image: url("../public/arrow-drop-down-fill.svg");
+//   background-size: 3rem 3rem;
+//   background-position: right 0.5rem center;
+//   background-repeat: no-repeat;
+//   padding: 0.8rem;
+//   padding-right: 2.5rem;
+//   border-radius: 0.5rem;
+//   border: 1px solid var(--green-300);
+// }
 
 textarea {
   resize: vertical;
-}
-
-label {
-  display: block;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-  color: var(--grey-800);
-  font-weight: 500;
-}
-
-label:not(label) {
-  /*! You must ensure the element matches one of these selectors: label */
-  outline: 2px solid red !important;
-}
-
-input {
-  display: block;
-  width: 100%;
-  padding: 5px 7px;
-  box-sizing: border-box;
-  font-size: 1.6rem;
-  text-align: left;
-  color: var(--grey-800);
-  border: 1px solid var(--grey-500);
-  border-radius: 3px;
-  background-color: white;
-  background-clip: padding-box;
-}
-
-input:not(input):not(button):not(select):not(textarea) {
-  /*! You must ensure the element matches one of these selectors: input, button, select, textarea */
-  outline: 2px solid red !important;
-}
-input:focus {
-  border-color: var(--grey-700);
-  outline: 0;
-}
-input:disabled,
-input.is-disabled {
-  background-color: #f7f9fa;
-}
-input.is-invalid,
-.form--validated input:invalid {
-  //   background-image: url("../images/icon-form-invalid.svg");
-  background-size: 14px;
-  background-position: right 10px center;
-  background-repeat: no-repeat;
-  padding-right: 34px;
-  border-color: rgba(232, 33, 16, 0.5);
-  box-shadow: none;
-  outline: 0;
-}
-input.is-valid,
-.form--validated input:valid {
-  //   background-image: url("../images/icon-form-valid.svg");
-  background-size: 14px;
-  background-position: right 10px center;
-  background-repeat: no-repeat;
-  padding-right: 34px;
-}
-
-input[type="checkbox"] {
-  -webkit-appearance: checkbox;
-  -moz-appearance: checkbox;
-  appearance: checkbox;
-}
-
-input[type="radio"] {
-  -webkit-appearance: radio;
-  -moz-appearance: radio;
-  appearance: radio;
-}
-
-button {
-  display: inline-block;
-  padding: 7px 12px;
-  font-weight: 500;
-  line-height: 1.4;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid var(--green-300);
-  color: var(--green-700);
-  background-color: unset;
-  border-radius: 3px;
-  transition: all 300ms ease;
-  cursor: pointer;
-
-  &.outline {
-    background-color: var(--green-300);
-    color: var(--white);
-  }
-
-  &.outline:hover {
-    color: var(--green-600);
-  }
-}
-
-button:not(button):not([type="submit"]) {
-  /*! You must ensure the element matches one of these selectors: button, [type=submit] */
-  outline: 2px solid red !important;
-}
-
-button[disabled],
-button.button--disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-button:focus {
-  box-shadow: 0 0 0 2px var(--green-100);
-  outline: none;
-}
-button:hover {
-  text-decoration: none;
-  background-color: var(--green-100);
 }
 
 .button-group {

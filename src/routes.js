@@ -12,6 +12,9 @@ const Router = () => {
           <Route index element={<Home />} />
           <Route path="posts" element={<Posts />} />
         </Route>
+        {/* <Route path="post-editor" element={}>
+
+        </Route> */}
       </Routes>
     </BrowserRouter>
   );

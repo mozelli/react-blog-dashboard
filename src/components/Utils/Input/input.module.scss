@@ -1,0 +1,42 @@
+input[type="text"],
+input[type="number"] {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--grey-900);
+  background-color: var(--white);
+  border: 1px solid var(--grey-300);
+  border-radius: 0.25rem;
+  transition: all 150ms ease;
+
+  writing-mode: horizontal-tb !important;
+
+  &:focus {
+    border: 1px solid var(--green-300);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--green-300-25);
+  }
+
+  &.lg {
+    min-height: calc(1.5em + 1rem + 2px);
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+  }
+
+  &.sm {
+    min-height: calc(1.5em + 0.5rem + 2px);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+  }
+}
+
+label.inputLabel {
+  display: inline-block;
+  color: var(--grey-900);
+  margin-bottom: 0.5rem;
+}
