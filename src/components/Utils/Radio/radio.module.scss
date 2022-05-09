@@ -1,0 +1,45 @@
+.radioContainer {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin-bottom: 0.125rem;
+
+  input[type="radio"] {
+    border-radius: 50%;
+    border: 1px solid var(--grey-300);
+    width: 1em;
+    height: 1em;
+    margin-top: 0.125rem;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    background-color: var(--white);
+    float: left;
+    margin-left: -1.5em;
+    appearance: none;
+
+    -webkit-print-color-adjust: exact;
+
+    &:active {
+      filter: brightness(90%);
+    }
+
+    &:focus {
+      border-color: var(--green-400);
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem var(--green-300-25);
+    }
+
+    &:checked {
+      background-image: url("./assets/radio-checked-icon.svg");
+      background-color: var(--green-400);
+      border-color: var(--green-400);
+    }
+  }
+
+  label.radioLabel {
+    display: inline-block;
+  }
+}
